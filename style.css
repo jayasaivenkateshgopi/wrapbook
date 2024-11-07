@@ -48,13 +48,13 @@ html{    scroll-behavior: smooth;   }
 
 }
 a{  color: inherit !important;  text-decoration: none !important;   }
-body,p,a{ font-size: 14px;    }
+body,p,a{ font-size: 14px !important;    }
 .btn{   background: var(--btn-color) !important;    color: white !important;    padding: 10px 15px;    border-radius: 10px;   }
 .fa{    color: var(--btn-color);    }
 .btn{   letter-spacing: 2px;    }
 
-h1{ font-size: clam( 35px, 5vw, 80px);  font-family: ibm plex serif;    font-size: clamp(35px, 5vw, 80px) !important;  }
-h2{ text-transform: uppercase;  font-size: clamp( 14px, 2vw, 16px) !important;   letter-spacing: 5px;   font-family: var(--primary-font) !important;    }
+h1{ font-size: clam( 35px, 5vw, 80px);  font-family: ibm plex serif;    font-size: clamp(35px, 5vw, 80px) !important;  font-weight: 400 !important; }
+h2{ text-transform: uppercase;  font-size: clamp( 14px, 2vw, 16px) !important;   letter-spacing: 5px;   font-family: var(--primary-font) !important;   font-weight: 600 !important; }
 h3{ font-weight: 500 !important;    font-size: clamp( 18px, 2vw, 22px) !important;  }
 
 /* Header Styles */
@@ -74,12 +74,21 @@ h3{ font-weight: 500 !important;    font-size: clamp( 18px, 2vw, 22px) !importan
 
     /* intro */    
         .intro-btns .fas{   font-size: 20px !important; vertical-align: bottom; }
-        .pills [class *= pill]{ position: relative; padding: 5px 20px;  border-radius: 50px;    width: fit-content; text-transform: uppercase; font-weight: 500;   letter-spacing: 1px;}
-        .dr-pill{   color: var(--dark-red); background-color: var(--bg-red);    border:  2px solid var(--dark-red);   }
-        .sb-pill{   color: var(--blue);   background: var(--bg-blue); border: 2px solid var(--blue);    }
-        .dg-pill{   color: var(--dark-green);   background: var(--bg-green);    border: 2px solid var(--dark-green);  }
-        .dy-pill{   color: var(--dark-yellow);  background: var(--bg-yellow);   border: 2px solid var(--dark-yellow); }
-        .lm-pill{   color: var(--dark-lime);    background: var(--bg-lime); border: 2px solid var(--dark-lime); }
+
+        .pills [class *= pill]{ padding: 5px 20px;  border-radius: 50px;    width: fit-content; text-transform: uppercase; font-weight: 500;   letter-spacing: 2px; box-shadow: inset 0 2px 5px 40px #0000,0 1px 24px #00000026;    }
+        .dr-pill{   color: var(--dark-red); background-color: var(--bg-red);    border:  1px solid var(--dark-red);   inset: 100px auto auto 20px;  }
+        .sb-pill{   color: var(--blue);   background: var(--bg-blue); border: 1px solid var(--blue);    inset: 45px auto auto 40px;}
+        .dg-pill{   color: var(--dark-green);   background: var(--bg-green);    border: 1px solid var(--dark-green);  inset: -15px auto auto 120px; }
+        .dy-pill{   color: var(--dark-yellow);  background: var(--bg-yellow);   border: 1px solid var(--dark-yellow); inset: 350px auto auto 400px; }
+        .lm-pill{   color: var(--dark-lime);    background: var(--bg-lime); border: 1px solid var(--dark-lime); inset: 400px auto auto 370px;   }
+
+        .pills [class *= pill], .light, .clap-pad{  position: absolute; } 
+        .light img, .clap-pad img{  max-width: 175px;   }
+
+
+
+        .slider{    width: fit-content; margin: auto;   }
+        .slider img{    max-width: 75%;   }
 
 
 
