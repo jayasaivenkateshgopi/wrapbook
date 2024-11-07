@@ -1,0 +1,86 @@
+*{  margin: 0;  padding: 0; box-sizing: border-box; }
+
+html{    scroll-behavior: smooth;   }
+
+.container-inner{   max-width: 1440px;  margin: auto;   padding: 0 10px;    }
+
+/* Pre defined values */
+:root{
+
+    /* Colors */
+    --primary-color: #313638;
+    --btn-color: #6733ff;
+    --medium-gray: #73777a;
+    --black: black;
+    --white: white;
+    --light-gray: #dfe3e5;
+    --light-lime: #def296;
+    --bg-violet: #f8f7ff;
+    --green: #1cb03b;
+    --red: #f2461b;
+    --yellow: #f5c345;
+    --lime: #a9cc0e;
+    --blue: #1c8aff;
+    --bg-gray: #f6f8fa;
+    --dark-violet: #202080;
+    --dark-gray: #3f4245;
+    --light-violet: #c7baff;
+    --dark-yellow: #bd6604;
+    --dark-lime: #4b7000;
+    --dark-red: #8a2511;
+    --bg-yellow: #fff9e3;
+    --bg-lime: #f6fde4;
+    --dark-blue: #003175;
+    --light-red: #ffdac4;
+    --light-blue: #87d9ff;
+    --bg-red: #fff5f1;
+    --dark-green: #0e612c;
+    --light-green: #c3f7c9;
+    --bg-green: #f0fdf2;
+    --bg-blue: #f2faff;
+    --light-yellow: #ffe48c;
+    --transparent: #0000;
+
+    /* fonts */
+    --primary-font: space mono, sans-serif;
+    --paragraph-font: poppins, sans-serif;
+    --mainheading-font: serif; 
+
+}
+a{  color: inherit !important;  text-decoration: none !important;   }
+body,p,a{ font-size: 14px;    }
+.btn{   background: var(--btn-color) !important;    color: white !important;    padding: 10px 15px;    border-radius: 10px;   }
+.fa{    color: var(--btn-color);    }
+.btn{   letter-spacing: 2px;    }
+
+h1{ font-size: clam( 35px, 5vw, 80px);  font-family: ibm plex serif;    font-size: clamp(35px, 5vw, 80px) !important;  }
+h2{ text-transform: uppercase;  font-size: clamp( 14px, 2vw, 16px) !important;   letter-spacing: 5px;   font-family: var(--primary-font) !important;    }
+h3{ font-weight: 500 !important;    font-size: clamp( 18px, 2vw, 22px) !important;  }
+
+/* Header Styles */
+    .header-elements{   font-family: var(--primary-font);    min-height: fit-content !important;    }
+    .d-nav a{   padding: 25px 15px; letter-spacing: 2px;    display: inline-block;}
+    .d-nav a:hover, .login:hover{ background: #f8f7ff;    }
+    .logo img{  max-width: 175px;   width: 100%;    }
+
+    /* hidden-nav */
+        .hidden-nav{   position: absolute;    top: 70px; left: 0;   }
+        .hidden-nav a{  display: block; padding: 15px 15px 10px;    transition: 1s ease;    }
+        .hidden-nav a:hover{    letter-spacing: 3px;    transition: 1s ease;    font-weight: 600;}
+
+/* main */
+    .mod-btn{   height: fit-content !important; color: var(--btn-color) !important;   }
+    .mod-btn.border-bottom{ border-color: var(--btn-color) !important;  }
+
+    /* intro */    
+        .intro-btns .fas{   font-size: 20px !important; vertical-align: bottom; }
+        .pills [class *= pill]{ position: relative; padding: 5px 20px;  border-radius: 50px;    width: fit-content; text-transform: uppercase; font-weight: 500;   letter-spacing: 1px;}
+        .dr-pill{   color: var(--dark-red); background-color: var(--bg-red);    border:  2px solid var(--dark-red);   }
+        .sb-pill{   color: var(--blue);   background: var(--bg-blue); border: 2px solid var(--blue);    }
+        .dg-pill{   color: var(--dark-green);   background: var(--bg-green);    border: 2px solid var(--dark-green);  }
+        .dy-pill{   color: var(--dark-yellow);  background: var(--bg-yellow);   border: 2px solid var(--dark-yellow); }
+        .lm-pill{   color: var(--dark-lime);    background: var(--bg-lime); border: 2px solid var(--dark-lime); }
+
+
+
+/* Responsive */
