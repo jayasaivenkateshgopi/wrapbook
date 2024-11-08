@@ -55,7 +55,7 @@ body,p,a{ font-size: 14px !important;    }
 
 h1{ font-size: clam( 35px, 5vw, 80px);  font-family: ibm plex serif;    font-size: clamp(35px, 5vw, 80px) !important;  font-weight: 400 !important; }
 h2{ text-transform: uppercase;  font-size: clamp( 14px, 2vw, 16px) !important;   letter-spacing: 5px;   font-family: var(--primary-font) !important;   font-weight: 600 !important; }
-h3{ font-weight: 500 !important;    font-size: clamp( 18px, 2vw, 22px) !important;  }
+h3{ font-weight: 400 !important;    font-size: clamp( 18px, 2vw, 22px) !important;  }
 
 /* Header Styles */
     .header-elements{   font-family: var(--primary-font);    min-height: fit-content !important;    }
@@ -83,12 +83,14 @@ h3{ font-weight: 500 !important;    font-size: clamp( 18px, 2vw, 22px) !importan
         .lm-pill{   color: var(--dark-lime);    background: var(--bg-lime); border: 1px solid var(--dark-lime); inset: 400px auto auto 370px;   }
 
         .pills [class *= pill], .light, .clap-pad{  position: absolute; } 
-        .light img, .clap-pad img{  max-width: 175px;   }
-
+        .light img{  max-width: 175px;   }
+        .clap-pad img{  max-width: 140px;   }
+        .light{ inset: 250px auto auto -2.5px;    }
+        .clap-pad{  inset: 10px auto auto 510px;   z-index: -1;}
 
 
         .slider{    width: fit-content; margin: auto;   }
-        .slider img{    max-width: 75%;   }
+        .slider img{    max-width: 450px;   }
 
 
 
