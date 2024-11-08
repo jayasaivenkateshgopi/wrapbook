@@ -1,0 +1,32 @@
+<svg width="125" height="25" viewBox="0 0 125 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_195_7029" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="21" height="25">
+<rect y="0.5" width="20.9639" height="24" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_195_7029)">
+<path d="M3.38402 20.8358L4.81677 14.6666L0.0302734 10.5186L6.34552 9.97057L8.80902 4.15332L11.2725 9.97057L17.5878 10.5186L12.8013 14.6666L14.234 20.8358L8.80902 17.5628L3.38402 20.8358Z" fill="#F2461B"/>
+</g>
+<mask id="mask1_195_7029" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="22" y="0" width="25" height="25">
+<rect x="22.9639" y="0.5" width="24" height="24" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask1_195_7029)">
+<path d="M29.384 20.8358L30.8168 14.6666L26.0303 10.5186L32.3455 9.97057L34.809 4.15332L37.2725 9.97057L43.5878 10.5186L38.8013 14.6666L40.234 20.8358L34.809 17.5628L29.384 20.8358Z" fill="#F2461B"/>
+</g>
+<mask id="mask2_195_7029" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="48" y="0" width="25" height="25">
+<rect x="48.9639" y="0.5" width="24" height="24" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask2_195_7029)">
+<path d="M55.384 20.8358L56.8168 14.6666L52.0303 10.5186L58.3455 9.97057L60.809 4.15332L63.2725 9.97057L69.5878 10.5186L64.8013 14.6666L66.234 20.8358L60.809 17.5628L55.384 20.8358Z" fill="#F2461B"/>
+</g>
+<mask id="mask3_195_7029" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="74" y="0" width="25" height="25">
+<rect x="74.9639" y="0.5" width="24" height="24" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask3_195_7029)">
+<path d="M81.384 20.8358L82.8168 14.6666L78.0303 10.5186L84.3455 9.97057L86.809 4.15332L89.2725 9.97057L95.5878 10.5186L90.8013 14.6666L92.234 20.8358L86.809 17.5628L81.384 20.8358Z" fill="#F2461B"/>
+</g>
+<mask id="mask4_195_7029" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="100" y="0" width="25" height="25">
+<rect x="100.964" y="0.5" width="24" height="24" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask4_195_7029)">
+<path d="M107.384 20.8358L108.817 14.6666L104.03 10.5186L110.346 9.97057L112.809 4.15332L115.273 9.97057L121.588 10.5186L116.801 14.6666L118.234 20.8358L112.809 17.5628L107.384 20.8358Z" fill="#F2461B"/>
+</g>
+</svg>

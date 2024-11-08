@@ -42,7 +42,7 @@ html{    scroll-behavior: smooth;   }
     --transparent: #0000;
 
     /* fonts */
-    --primary-font: space mono, sans-serif;
+    --primary-font: monospace, sans-serif;
     --paragraph-font: poppins, sans-serif;
     --mainheading-font: serif; 
 
@@ -53,9 +53,11 @@ body,p,a{ font-size: 14px !important;    }
 .fa{    color: var(--btn-color);    }
 .btn{   letter-spacing: 2px;    }
 
-h1{ font-size: clam( 35px, 5vw, 80px);  font-family: ibm plex serif;    font-size: clamp(35px, 5vw, 80px) !important;  font-weight: 400 !important; }
-h2{ text-transform: uppercase;  font-size: clamp( 14px, 2vw, 16px) !important;   letter-spacing: 5px;   font-family: var(--primary-font) !important;   font-weight: 600 !important; }
+h1{ font-family: ibm plex serif;    font-size: clamp(35px, 5vw, 80px) !important;  font-weight: 400 !important; }
+h2{ font-size: clamp( 25px, 3vw, 50px) !important; font-family: ibm plex serif;   margin-bottom: 20px !important;    }
 h3{ font-weight: 400 !important;    font-size: clamp( 18px, 2vw, 22px) !important;  }
+h4{ text-transform: uppercase;  font-size: clamp( 14px, 2vw, 16px) !important;   letter-spacing: 5px;   font-family: var(--primary-font) !important;   font-weight: 600 !important; }
+
 
 /* Header Styles */
     .header-elements{   font-family: var(--primary-font);    min-height: fit-content !important;    }
@@ -69,11 +71,12 @@ h3{ font-weight: 400 !important;    font-size: clamp( 18px, 2vw, 22px) !importan
         .hidden-nav a:hover{    letter-spacing: 3px;    transition: 1s ease;    font-weight: 600;}
 
 /* main */
-    .mod-btn{   height: fit-content !important; color: var(--btn-color) !important;   }
+    .mod-btn{   height: fit-content !important; color: var(--btn-color) !important;   line-height: 1rem !important;    text-transform: uppercase !important;    width: max-content !important;  }
+    .mod-btn a{ display: inline-block !important;   padding-bottom: 5px;    font-family: monospace; letter-spacing: 2px;    }
     .mod-btn.border-bottom{ border-color: var(--btn-color) !important;  }
 
     /* intro */    
-        .intro-btns .fas{   font-size: 20px !important; vertical-align: bottom; }
+        .intro-btns .fas{   font-size: 20px !important; vertical-align: middle; }
 
         .pills [class *= pill]{ padding: 5px 20px;  border-radius: 50px;    width: fit-content; text-transform: uppercase; font-weight: 500;   letter-spacing: 2px; box-shadow: inset 0 2px 5px 40px #0000,0 1px 24px #00000026;    }
         .dr-pill{   color: var(--dark-red); background-color: var(--bg-red);    border:  1px solid var(--dark-red);   inset: 100px auto auto 20px;  }
@@ -92,6 +95,17 @@ h3{ font-weight: 400 !important;    font-size: clamp( 18px, 2vw, 22px) !importan
         .slider{    width: fit-content; margin: auto;   }
         .slider img{    max-width: 450px;   }
 
+    /* testimonials */
+        .testimonials .row{ justify-content: space-between; align-content: space-between;   }
+        .testimonials .col-3{   padding: 50px !important;   flex: 1 1 30%;  margin: 10px; background: var(--bg-gray);    animation: appear 0.8s forwards; display: flex;    flex-direction: column;}
+        .testimonials .col-3 img{   margin-bottom: 20px;    max-width: 150px;   }
+        .testimonials .client{  margin-top: auto;   }
+        .testimonials .name{    margin-bottom: 0 !important;       }
+
+        @keyframes appear {
+            from {  opacity: 0; transform: translateY(30px) scale(0.9); }
+            to {    opacity: 1; transform: translateY(0) scale(1);  }
+        }
 
 
 /* Responsive */
