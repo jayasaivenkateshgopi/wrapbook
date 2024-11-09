@@ -2,7 +2,7 @@
 
 html{    scroll-behavior: smooth;   }
 
-.container-inner{   max-width: 1440px;  margin: auto;   padding: 0 10px;    }
+.container{   max-width: 1440px;  margin: auto !important;   padding: 0 10px;    }
 
 /* Pre defined values */
 :root{
@@ -98,9 +98,13 @@ h4{ text-transform: uppercase;  font-size: clamp( 14px, 2vw, 18px) !important;  
     /* testimonials */
         .testimonials .row{ justify-content: space-between; align-content: space-between;   }
         .testimonials .col-3{   padding: 45px !important;   flex: 1 1 30%;  margin: 10px; background: var(--bg-gray);   animation-delay: 1s;    animation: appear 0.8s forwards; display: flex;    flex-direction: column; gap: 20px;  justify-content: space-between;  }
-        .testimonials .col-3 img{   margin-bottom: 20px;    max-width: 150px;   }
-        .testimonials .feedback p{      }
+        .testimonials .col-3 img{   margin-bottom: 20px;    max-width: 150px;  }
         .testimonials .name{    margin-bottom: 0 !important;       }
+        .testimonials .title-group .col:first-child{    flex: none !important;  }
+        .testimonials .title-group > a{   border: 1px solid var(--light-red); box-shadow: 0 4px 24px #f2461b33;   border-radius: 50px;    font-family: var(--primary-font);   letter-spacing: 2px;}
+        .testimonials .title-group .rating-stars{   color: var(--red);  }
+        .testimonials .title-group > a:hover{   box-shadow: 0 4px 26px #f2461b4d; }
+          
 
         @keyframes appear {
             from {  opacity: 0; transform: translateY(30px) scale(0.9); }
@@ -108,9 +112,17 @@ h4{ text-transform: uppercase;  font-size: clamp( 14px, 2vw, 18px) !important;  
         }
 
     /* team */
-    .team .col-2{   height: 220px;  width: 20%;    }
-    .team img{  background: #bebebe;    width: 100%;    height: 100%;   object-fit: cover;  }
-    .team .expert-details{  color: var(--white);    background-color: #202080cc;    flex-direction: column;  justify-content: space-between;    width: 100%;    height: 100%;   padding: 10%;   transition: opacity .3s cubic-bezier(.165,.84,.44,1);   position: absolute; inset: 0%;  display: flex;  }
+        .team .col{   height: 220px;  width: 20%;    position: relative;  flex: 1 1 17%;}
+        .team img{  background: #bebebe;    width: 100%;    height: 100%;   object-fit: cover;  }
+        .team .expert-details{  display: none !important;  color: var(--white);    background-color: #202080cc;    flex-direction: column;  justify-content: space-between;    width: 100%;    height: 100%;   padding:  10% 10% 5%;   transition: opacity .3s cubic-bezier(.165,.84,.44,1);   position: absolute; inset: 0;      display: flex;  }
+        .team .col:hover .expert-details{ display: flex !important;  color: white !important;    }    
+        .team .name{    font-size: 1.5rem !important;   line-height: 1 !important;  margin-bottom: 10px !important; }
+        .team .expertpagelink{  font-family: var(--primary-font) !important;     justify-content: space-between; }
 
-
-/* Responsive */
+    /* Payroll */
+        .payroll{   background: var(--btn-color)  url(assets/pattern-component.svg) no-repeat fixed center;  }
+        .payroll-text{  padding: clamp(40px , 10vw, 100px ); background: radial-gradient(circle, rgba(103, 51, 255, .9) 20%, rgba(103, 51, 255, 0)) }
+        .payroll-btns{  font-family:  var(--primary-font);  }
+        .payroll-btns .pricing{ background: white !important;   color: var(--btn-color) !important;    }
+        .payroll-btns .mod-btn{ color: white !important;    }
+        .payroll-btns .mod-btn.border-bottom{   border-color: white !important;    }
