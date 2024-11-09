@@ -48,7 +48,7 @@ html{    scroll-behavior: smooth;   }
 
 }
 a{  color: inherit !important;  text-decoration: none !important;   }
-body,p,a{ font-size: 14px !important;    }
+body,p,a{  font-size: clamp(14px, 1vw, 18px) !important;    }
 .btn{   background: var(--btn-color) !important;    color: white !important;    padding: 10px 15px;    border-radius: 10px;   }
 .fa{    color: var(--btn-color);    }
 .btn{   letter-spacing: 2px;    }
@@ -56,7 +56,7 @@ body,p,a{ font-size: 14px !important;    }
 h1{ font-family: ibm plex serif;    font-size: clamp(35px, 5vw, 80px) !important;  font-weight: 400 !important; }
 h2{ font-size: clamp( 25px, 3vw, 50px) !important; font-family: ibm plex serif;   margin-bottom: 20px !important;    }
 h3{ font-weight: 400 !important;    font-size: clamp( 18px, 2vw, 22px) !important;  }
-h4{ text-transform: uppercase;  font-size: clamp( 14px, 2vw, 16px) !important;   letter-spacing: 5px;   font-family: var(--primary-font) !important;   font-weight: 600 !important; }
+h4{ text-transform: uppercase;  font-size: clamp( 14px, 2vw, 18px) !important;   letter-spacing: 5px;   font-family: var(--primary-font) !important;   font-weight: 600 !important; }
 
 
 /* Header Styles */
@@ -73,7 +73,7 @@ h4{ text-transform: uppercase;  font-size: clamp( 14px, 2vw, 16px) !important;  
 /* main */
     .mod-btn{   height: fit-content !important; color: var(--btn-color) !important;   line-height: 1rem !important;    text-transform: uppercase !important;    width: max-content !important;  }
     .mod-btn a{ display: inline-block !important;   padding-bottom: 5px;    font-family: monospace; letter-spacing: 2px;    }
-    .mod-btn.border-bottom{ border-color: var(--btn-color) !important;  }
+    .mod-btn.border-bottom{ border-color: var(--btn-color) !important;  border-width: 1.5px !important; }
 
     /* intro */    
         .intro-btns .fas{   font-size: 20px !important; vertical-align: middle; }
@@ -83,7 +83,7 @@ h4{ text-transform: uppercase;  font-size: clamp( 14px, 2vw, 16px) !important;  
         .sb-pill{   color: var(--blue);   background: var(--bg-blue); border: 1px solid var(--blue);    inset: 45px auto auto 40px;}
         .dg-pill{   color: var(--dark-green);   background: var(--bg-green);    border: 1px solid var(--dark-green);  inset: -15px auto auto 120px; }
         .dy-pill{   color: var(--dark-yellow);  background: var(--bg-yellow);   border: 1px solid var(--dark-yellow); inset: 350px auto auto 400px; }
-        .lm-pill{   color: var(--dark-lime);    background: var(--bg-lime); border: 1px solid var(--dark-lime); inset: 400px auto auto 370px;   }
+        .lm-pill{   color: var(--dark-lime);    background: var(--bg-lime); border: 1px solid var(--dark-lime); inset: 400px auto auto 310px;   }
 
         .pills [class *= pill], .light, .clap-pad{  position: absolute; } 
         .light img{  max-width: 175px;   }
@@ -97,15 +97,20 @@ h4{ text-transform: uppercase;  font-size: clamp( 14px, 2vw, 16px) !important;  
 
     /* testimonials */
         .testimonials .row{ justify-content: space-between; align-content: space-between;   }
-        .testimonials .col-3{   padding: 50px !important;   flex: 1 1 30%;  margin: 10px; background: var(--bg-gray);    animation: appear 0.8s forwards; display: flex;    flex-direction: column;}
+        .testimonials .col-3{   padding: 45px !important;   flex: 1 1 30%;  margin: 10px; background: var(--bg-gray);   animation-delay: 1s;    animation: appear 0.8s forwards; display: flex;    flex-direction: column; gap: 20px;  justify-content: space-between;  }
         .testimonials .col-3 img{   margin-bottom: 20px;    max-width: 150px;   }
-        .testimonials .client{  margin-top: auto;   }
+        .testimonials .feedback p{      }
         .testimonials .name{    margin-bottom: 0 !important;       }
 
         @keyframes appear {
             from {  opacity: 0; transform: translateY(30px) scale(0.9); }
             to {    opacity: 1; transform: translateY(0) scale(1);  }
         }
+
+    /* team */
+    .team .col-2{   height: 220px;  width: 20%;    }
+    .team img{  background: #bebebe;    width: 100%;    height: 100%;   object-fit: cover;  }
+    .team .expert-details{  color: var(--white);    background-color: #202080cc;    flex-direction: column;  justify-content: space-between;    width: 100%;    height: 100%;   padding: 10%;   transition: opacity .3s cubic-bezier(.165,.84,.44,1);   position: absolute; inset: 0%;  display: flex;  }
 
 
 /* Responsive */
