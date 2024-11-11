@@ -2,7 +2,8 @@
 
 html{    scroll-behavior: smooth;   }
 
-.container{   max-width: 1440px;  margin: auto !important;   padding: 0 10px;    }
+.container{   max-width: 1440px;  margin: auto !important;   padding: 0 10px !important;    }
+
 
 /* Pre defined values */
 :root{
@@ -48,19 +49,21 @@ html{    scroll-behavior: smooth;   }
 
 }
 a{  color: inherit !important;  text-decoration: none !important;   }
-body,p,a{  font-size: clamp(14px, 1vw, 18px) !important;    }
+body,p,a{  font-size: clamp(14px, 1vw, 18px) !important;    text-align: justify;    }
 .btn{   background: var(--btn-color) !important;    color: white !important;    padding: 10px 15px;    border-radius: 10px;   }
 .fa{    color: var(--btn-color);    }
 .btn{   letter-spacing: 2px;    }
+img{    width: 100%;    }
 
 h1{ font-family: ibm plex serif;    font-size: clamp(35px, 5vw, 80px) !important;  font-weight: 400 !important; }
-h2{ font-size: clamp( 25px, 3vw, 50px) !important; font-family: ibm plex serif;   margin-bottom: 20px !important;    }
+h2{ font-size: clamp( 30px, 3vw, 60px) !important; font-family: ibm plex serif;   margin-bottom: 20px !important;    }
 h3{ font-weight: 400 !important;    font-size: clamp( 18px, 2vw, 22px) !important;  }
 h4{ text-transform: uppercase;  font-size: clamp( 14px, 2vw, 18px) !important;   letter-spacing: 5px;   font-family: var(--primary-font) !important;   font-weight: 600 !important; }
 
 
 /* Header Styles */
     .header-elements{   font-family: var(--primary-font);    min-height: fit-content !important;    }
+    /* .header-elements > *{   flex: 1 1 auto; } */
     .d-nav a{   padding: 25px 15px; letter-spacing: 2px;    display: inline-block;}
     .d-nav a:hover, .login:hover{ background: #f8f7ff;    }
     .logo img{  max-width: 175px;   width: 100%;    }
@@ -74,6 +77,8 @@ h4{ text-transform: uppercase;  font-size: clamp( 14px, 2vw, 18px) !important;  
     .mod-btn{   height: fit-content !important; color: var(--btn-color) !important;   line-height: 1rem !important;    text-transform: uppercase !important;    width: max-content !important;  }
     .mod-btn a{ display: inline-block !important;   padding-bottom: 5px;    font-family: monospace; letter-spacing: 2px;    }
     .mod-btn.border-bottom{ border-color: var(--btn-color) !important;  border-width: 1.5px !important; }
+    div:has(.pricing, .mod-btn){    flex-wrap: wrap !important; }
+    .pricing,.mod-btn{  min-width: 150px !important;    }
 
     /* intro */    
         .intro-btns .fas{   font-size: 20px !important; vertical-align: middle; }
@@ -88,17 +93,39 @@ h4{ text-transform: uppercase;  font-size: clamp( 14px, 2vw, 18px) !important;  
         .pills [class *= pill], .light, .clap-pad{  position: absolute; } 
         .light img{  max-width: 175px;   }
         .clap-pad img{  max-width: 140px;   }
-        .light{ inset: 250px auto auto -2.5px;    }
+        .light{ inset: 250px auto auto 2.5px;    }
         .clap-pad{  inset: 10px auto auto 510px;   z-index: -1;}
 
 
-        .slider{    width: fit-content; margin: auto;   }
-        .slider img{    max-width: 450px;   }
+        .intro .slider{    margin: auto;  overflow: hidden;    position: relative;    height: 450px;  z-index: -1; }
+        .intro .slider img{    width: 100%;    height: 100%;   object-fit: cover;  position: absolute; animation: fourslide 25s infinite;  opacity: 0; }
+        .intro .slider img{    max-width: 450px;   }
+        .slider > img:nth-child(2) { animation-delay: 5s;        }
+        .slider > img:nth-child(3) { animation-delay: 10s;          }      
+        .slider > img:nth-child(4) { animation-delay: 15s;          }      
+
+        @keyframes fourslide {
+            10% {   opacity: 1; }
+            40% {   opacity: 1; }
+            80% {   opacity: 0; }
+        }
+
+    /* Services */
+    .services .slider{  height: clamp(100px, 30vw, 450px);}
+    .services .slider img{  animation: serviceslide 15s infinite;  position: absolute;  height: auto;   opacity: 0;  top: 0; left: 0;   width: 100%;    }
+    .services .slider > img:nth-child(2) { animation-delay: 5s;        }
+    .services .slider > img:nth-child(3) { animation-delay: 10s;          }    
+    @keyframes serviceslide{
+        10% {   opacity: 1; }
+            40% {   opacity: 1; }
+            80% {   opacity: 0; }
+    }
+    
 
     /* testimonials */
         .testimonials .row{ justify-content: space-between; align-content: space-between;   }
         .testimonials .col-3{   padding: 45px !important;   flex: 1 1 30%;  margin: 10px; background: var(--bg-gray);   animation-delay: 1s;    animation: appear 0.8s forwards; display: flex;    flex-direction: column; gap: 20px;  justify-content: space-between;  }
-        .testimonials .col-3 img{   margin-bottom: 20px;    max-width: 150px;  }
+        .testimonials .col-3 img{   margin-bottom: 20px;    max-width: 75%;  }
         .testimonials .name{    margin-bottom: 0 !important;       }
         .testimonials .title-group .col:first-child{    flex: none !important;  }
         .testimonials .title-group > a{   border: 1px solid var(--light-red); box-shadow: 0 4px 24px #f2461b33;   border-radius: 50px;    font-family: var(--primary-font);   letter-spacing: 2px;}
@@ -110,6 +137,7 @@ h4{ text-transform: uppercase;  font-size: clamp( 14px, 2vw, 18px) !important;  
             from {  opacity: 0; transform: translateY(30px) scale(0.9); }
             to {    opacity: 1; transform: translateY(0) scale(1);  }
         }
+    
 
     /* team */
         .team .col{   height: 220px;  width: 20%;    position: relative;  flex: 1 1 17%;}
@@ -120,9 +148,41 @@ h4{ text-transform: uppercase;  font-size: clamp( 14px, 2vw, 18px) !important;  
         .team .expertpagelink{  font-family: var(--primary-font) !important;     justify-content: space-between; }
 
     /* Payroll */
-        .payroll{   background: var(--btn-color)  url(assets/pattern-component.svg) no-repeat fixed center;  }
-        .payroll-text{  padding: clamp(40px , 10vw, 100px ); background: radial-gradient(circle, rgba(103, 51, 255, .9) 20%, rgba(103, 51, 255, 0)) }
+        .payroll{   background: var(--btn-color)  url(assets/pattern-component.svg) fixed center;  }
+        .payroll-text{  padding: clamp(40px , 10vw, 100px ); background: radial-gradient(circle, rgba(103, 51, 255, .9) 20%, rgba(103, 51, 255, 0))}
         .payroll-btns{  font-family:  var(--primary-font);  }
         .payroll-btns .pricing{ background: white !important;   color: var(--btn-color) !important;    }
         .payroll-btns .mod-btn{ color: white !important;    }
         .payroll-btns .mod-btn.border-bottom{   border-color: white !important;    }
+
+/* Footer */
+    .footer-btm .menu-item{ display: inline-block;  position: relative; margin-left: 20px;  }
+    .footer-btm .menu-item:not(:first-child):before{   content: ".";    position: absolute; font-size: 30px;    top: -20px; left: -15px;    }
+
+/* Responsive */
+
+@media ( 999px <= width <= 1399px){
+    .dy-pill{   inset: 350px auto auto 350px;   }
+    .dr-pill{   inset: 100px auto auto -20px;   }
+    .sb-pill{   inset: 45px auto auto 0px;  }
+    .lm-pill{   inset: 400px auto auto 280px;   }
+    .light {    inset: 250px auto auto -42.5px;    }
+    .clap-pad{  inset: 10px auto auto 400px;    }
+}
+
+@media ( width <= 999px){
+    .light {    inset: 250px auto auto 28px;    }
+}
+
+@media(width <= 767px){
+    .light {    inset: 250px auto auto -62px;    }
+    .clap-pad { inset: 10px auto auto 400px;    left: 70%;  z-index: 0; }
+}
+
+@media (width <= 575px){
+    .container{ padding: 0 30px !important; }
+
+    .pills [class *= pill]{ display: none !important;   }
+    .light{ width: 35%; left: -9%;  top: 60%;   }
+    .slider img{    width: 80%; }
+}
